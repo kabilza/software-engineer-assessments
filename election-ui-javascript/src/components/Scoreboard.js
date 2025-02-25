@@ -38,7 +38,13 @@ function Scoreboard() {
           <>
             {results.metadata.isComplete ? <h1>Results: Counting Completed</h1> : <h1>Counting Pending... Not Completed</h1>}
             <Scorecard results={results.results} />
-            <a className="Scoreboard-refresh">Refresh</a>
+            <button 
+              className="Scoreboard-refresh" 
+              onClick={getData} 
+              disabled={loading}
+            >
+              {loading ? "Refreshing..." : "Refresh"}
+            </button>
             <h1>Learn more about the parties...</h1>
             <PartyLinks />
           </>
