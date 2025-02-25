@@ -8,7 +8,7 @@ function Scorecard({ results }) {
   let scores = [];
   for (let i=0; i < results.length; i++) {
     scores.push(
-      <tr key={i}>
+      <tr className={results[i].winner ? 'winner' : ''} key={i}>
         <td>{results[i].party}</td>
         <td>{results[i].name}</td>
         <td>{results[i].votes}</td>
