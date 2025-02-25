@@ -14,11 +14,11 @@ function Scoreboard() {
     try {
       setLoading(true);
       const resultData = await fetchData();
-      setResults(resultData.results);
+      setResults(resultData);
       setLoading(false);
     } catch (e) {
       setLoading(false);
-      setError(true);
+      setError(true); 
     }
   }
 
