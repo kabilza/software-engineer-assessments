@@ -6,7 +6,7 @@ async function fetchResults() {
     return arr.find(num => num === max);
   }
   const results = await fetchResultData();
-  const candidateData = await fetchCandidateData(); //change to await fetchCandidateData()
+  const candidateData = await fetchCandidateData();
   const candidateWinnerVoteValue = findMaxInArray(results.results.map((result) => result.votes)) 
 
   let combinedResults = results.results.map(
