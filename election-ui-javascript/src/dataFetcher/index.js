@@ -9,14 +9,6 @@ async function fetchResults() {
   const candidateData = await fetchCandidateData(); //change to await fetchCandidateData()
   const candidateWinnerVoteValue = findMaxInArray(results.results.map((result) => result.votes)) 
 
-  // let combinedResults = results.results.map((result) => {
-  //   const candidate = candidateData.find((candidate) => candidate.id === result.candidateId);
-  //   return {
-  //     ...result,
-  //     name: candidate.name
-  //   };`
-  // })
-
   let combinedResults = results.results.map(
     (result) => {
       let candidate = candidateData.find((candidate) => candidate.id === result.candidateId )
@@ -30,7 +22,12 @@ async function fetchResults() {
     }
   )
 
-  return combinedResults;
+  const finalResult = {
+    metadata: results.metadata,
+    results: combinedResults
+};
+
+  return finalResult;
 }
 
 export default fetchResults;

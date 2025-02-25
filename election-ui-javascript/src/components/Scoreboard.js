@@ -36,8 +36,8 @@ function Scoreboard() {
           loading ? <h2>Loading...</h2> :
           error ? <h1>Error</h1> :
           <>
-            <h1>Results</h1>
-            <Scorecard results={results} />
+            {results.metadata.isComplete ? <h1>Results: Counting Completed</h1> : <h1>Counting Pending... Not Completed</h1>}
+            <Scorecard results={results.results} />
             <a className="Scoreboard-refresh">Refresh</a>
             <h1>Learn more about the parties...</h1>
             <PartyLinks />

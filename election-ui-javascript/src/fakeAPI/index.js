@@ -58,7 +58,7 @@ const fetchResultData = () => {
         return { ...item, votes: dubiouslyUpdateVoteCount(item, callCount) };
       }, []);
 
-      resolve({ ...metadata, results: apiResultData});
+      resolve({ metadata: metadata, results: apiResultData});
     }, 500);
   }
 )};
