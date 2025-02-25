@@ -11,13 +11,6 @@ const PARTIES = [
 
 function PartyLinks() {
   return (
-    // <ul className="Party-links">
-    //   {PARTIES.map((party) =>
-    //     (<li className="Party-link-button" key={party.name}>
-    //       <a href={party.url}>{party.name}</a>
-    //     </li>)
-    //   )}
-    // </ul>
     <div className='Party-links-container'>
       {PARTIES.map((party) =>
       (<a className="Party-links-button" href={party.url} key={party.name}>
