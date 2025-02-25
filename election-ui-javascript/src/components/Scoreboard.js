@@ -36,7 +36,7 @@ function Scoreboard() {
           loading ? <h2>Loading...</h2> :
           error ? <h1>Error</h1> :
           <>
-            {results.metadata.isComplete ? <h1>Results: Counting Completed</h1> : <h1>Counting Pending... Not Completed</h1>}
+            {results.isComplete ? <h1>Results: Counting Completed</h1> : <h1>Counting Pending... Not Completed</h1>}
             <Scorecard results={results.results} />
             <button 
               className="Scoreboard-refresh" 

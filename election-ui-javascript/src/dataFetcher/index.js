@@ -23,7 +23,7 @@ async function fetchResults() {
   )
 
   const finalResult = {
-    metadata: results.metadata,
+    isComplete: results.metadata.isComplete,
     results: combinedResults
 };
 
